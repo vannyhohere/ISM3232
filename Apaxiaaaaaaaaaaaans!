@@ -1,0 +1,31 @@
+using System;
+
+namespace ApaxiansProblem
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Store what the user inputs into the input variable
+            string input = Console.ReadLine();
+
+            //Look at the first character in the string and assign it the the variable last
+            string last = input.Substring(0,1); 
+            int index;
+            //Write the character written in last
+            Console.Write(last);
+
+            //For loop until it checks the whole input
+            for (index = 1; index < input.Length; index++)
+            {
+                // If the input at position index is not equal to last then assign that character to last and write it
+                if (input.Substring(index,1) != last)
+                {
+                    last = input.Substring(index, 1);
+                    Console.Write(last);
+                }
+
+            }
+        }
+    }
+}
